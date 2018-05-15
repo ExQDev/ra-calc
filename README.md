@@ -1,11 +1,11 @@
 # ra-calc
 Test Calc on redux-react for RA
 
-#Install
+##Install
 
     git clone https://github.com/ExQDev/ra-calc.git && cd ra-calc && git submodule update --recursive --remote
 
-#Run
+##Run
 
 run server:
 
@@ -17,7 +17,7 @@ run client (another terminal):
 
 then goto localhost:3000 (or which is provided by client output)
 
-#Stop
+##Stop
 
     Ctrl+C
 
