@@ -14,7 +14,7 @@ run server:
 run client (another terminal):
 
     cd *calc ; 
-    sudo npm install ; 
+    npm install ; 
     sudo npm start
 
 then goto localhost:3000 (or which is provided by client output)
