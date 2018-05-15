@@ -1,0 +1,6 @@
+[submodule "ra-react-calc"]
+	path = ra-react-calc
+	url = https://github.com/ExQDev/ra-react-calc.git
+[submodule "ra-api-gateway"]
+	path = ra-api-gateway
+	url = https://github.com/ExQDev/ra-api-gateway.git
