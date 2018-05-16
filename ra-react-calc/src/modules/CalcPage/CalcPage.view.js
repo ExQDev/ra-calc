@@ -2,11 +2,7 @@ import React, { Component } from 'react'
 import CalcButton from '../../components/CalcButton'
 import './CalcPage.css'
 import {
-  Card,
-  CardActions,
-  CardHeader,
-  TextField,
-  CardContent
+  TextField
 } from 'material-ui'
 
 export default class CalcPage extends Component {
@@ -20,7 +16,6 @@ export default class CalcPage extends Component {
     }
     
     this.do = this.do.bind(this)
-  
     this.handleaChange = this.handleaChange.bind(this)
     this.handlebChange = this.handlebChange.bind(this)
   }
@@ -38,7 +33,7 @@ export default class CalcPage extends Component {
   handlebChange(e) {
       this.setState({b: e.target.value});
   }
-  
+
   render () {
     const { state } = this
     const { res } = this.props
@@ -62,19 +57,19 @@ export default class CalcPage extends Component {
           <td className="actionCell">
             <CalcButton 
                 name={'mul'}
-                action={this.do('*')}
+                action={() => this.do('*')}
                 label={'x'}/>
             <CalcButton 
                 name={'div'}
-                action={this.do('/')}
+                action={() => this.do('/')}
                 label={'/'}/>
             <CalcButton 
                 name={'add'}
-                action={this.do('+')}
+                action={() => this.do('+')}
                 label={'+'}/>
             <CalcButton 
                 name={'sub'}
-                action={this.do('-')}
+                action={() => this.do('-')}
                 label={'-'}/>
           </td>
           <td>

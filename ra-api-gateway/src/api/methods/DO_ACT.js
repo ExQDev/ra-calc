@@ -5,16 +5,8 @@ export default async ({ payload, emitAction, db, sessionData }) => {
   let { a, b, action } = payload
   
   try {
-    switch(action)
-    {
-      case "*":
-      case "+":
-      case "-":
-      case "/":
-        var val = "" + a + " " + action + " " + b;
-        result = eval(val);
-        break
-    }
+    var val = "" + a + " " + action + " " + b;
+    result = eval(val);
     emitAction('RESULT_ACT', { a: a, b: b, action: action, result: result })
   } catch (error) {
     emitAction('SNACK', {
