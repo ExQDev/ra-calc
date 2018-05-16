@@ -14,38 +14,23 @@ import {
 export default class CalcPage extends Component {
   constructor (props, context) {
     super(props, context)
-    //console.log(calcState)
     this.state = {
       a:0,
       b:0, 
       action:'',
       res: 0
     }
-    //console.log(this.state)
-    this.do = this.do.bind(this)
-    this.mul = this.mul.bind(this)
-    this.add = this.add.bind(this)
-    this.sub = this.sub.bind(this)
-    this.div = this.div.bind(this)
     
+    this.do = this.do.bind(this)
+  
     this.handleaChange = this.handleaChange.bind(this)
     this.handlebChange = this.handlebChange.bind(this)
-    this.addOne = this.addOne.bind(this)
   }
 
-  addOne() {
-    //console.log(this.state)
-    //console.log(this.props)
-    this.setState({
-      res: this.state.res
-    })
-  }
-  
   do(actstr)
   {
     const { aact } = this.props
     const { state } = this
-    //console.log(state)
     aact({ a:state.a, b:state.b, action: actstr, res: state.res })
   }
 
@@ -55,18 +40,7 @@ export default class CalcPage extends Component {
   handlebChange(e) {
       this.setState({b: e.target.value});
   }
-  mul() {
-    this.do('*')
-  }
-  add() {
-    this.do('+')
-  }
-  div() {
-    this.do('/')
-  }
-  sub() {
-    this.do('-')
-  }
+  
   render () {
     const { state } = this
     const { res } = this.props
@@ -90,19 +64,19 @@ export default class CalcPage extends Component {
           <td className="actionCell">
             <CalcButton 
                 name={'mul'}
-                action={this.mul}
+                action={this.do('*')}
                 label={'x'}/>
             <CalcButton 
                 name={'div'}
-                action={this.div}
+                action={this.do('/')}
                 label={'/'}/>
             <CalcButton 
                 name={'add'}
-                action={this.add}
+                action={this.do('+')}
                 label={'+'}/>
             <CalcButton 
                 name={'sub'}
-                action={this.sub}
+                action={this.do('-')}
                 label={'-'}/>
           </td>
           <td>
@@ -113,7 +87,7 @@ export default class CalcPage extends Component {
                 />
           </td>
           <td>
-            <button onClick={ this.addOne }>={ this.state.counter }</button>
+            =
           </td>
           <td>
             <label>{res}</label>
@@ -124,13 +98,5 @@ export default class CalcPage extends Component {
       </div>
     )
   }
-  
-  // render () {
-  //   return (
-  //     <div>
-  //       <CalcForm {...this.props }/>
-  //     </div>
-  //   )
-  // }
 }
 

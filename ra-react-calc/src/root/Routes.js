@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Switch, Route } from 'react-router-dom'
 import CalcPage from './../modules/CalcPage'
-//import FuelSavingsPage from './../modules/FuelSavingsPage'
 import AboutPage from './../components/AboutPage'
 import NotFoundPage from './../components/NotFoundPage'
 import DialogPage from './../modules/Dialog'
@@ -13,7 +12,6 @@ export default class Routes extends Component {
   render () {
     return (
       <Switch>
-        {/* <Route exact path='/' component={CalcPage} /> */}
         <Route exact path='/' component={userIsNotAuthenticated(SignIn)} />
         <WithAuth>
           <Route exact path='/calc' component={CalcPage} />

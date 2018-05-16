@@ -1,6 +1,5 @@
 import { combineReducers } from 'redux'
-//import { fuelSavingsReducer } from '../modules/FuelSavingsPage'
-import { calcState } from './initialState'
+//import { calcState } from './initialState'
 import { calcReducer } from '../modules/CalcPage'
 import { dialogState } from '../modules/Dialog'
 import { drawerState } from '../modules/Drawer'

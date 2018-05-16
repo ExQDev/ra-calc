@@ -6,13 +6,11 @@ import { push } from 'react-router-redux'
 
 export default connect(
   state => {
-    //console.log(state.calcState)
     return state.calcState
   },
   dispatch => ({
     aact: bindActionCreators(aact, dispatch),
     ract: bindActionCreators(ract, dispatch),
     push: bindActionCreators(push, dispatch)
-    //actions: bindActionCreators(actions, dispatch)
   })
 )(CalcPageView)
