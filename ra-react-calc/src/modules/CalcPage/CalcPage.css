@@ -1,0 +1,29 @@
+.alt-header {
+  color: green;
+}
+
+button{
+  background-color: transparent !important;
+  border: 1px solid rgb(19, 82, 153) !important;
+  color: rgb(19, 82, 153) !important;
+  transform: scale(1);
+  transition: all .15s ease-in-out !important;
+  width: 30px;
+  height: 30px;
+  margin: 1px;
+}
+
+button:hover{
+  background-color: rgb(19, 82, 153) !important;
+  color: lavender !important;
+  transform: scale(2) !important;
+  border: 3px solid rgb(19, 82, 153) !important;
+  border-radius: 1px;
+  z-index: 100;
+}
+
+.actionCell{
+  display: flex;
+  flex-wrap: wrap;
+  width: 65px;
+}
