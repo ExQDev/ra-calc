@@ -6,7 +6,7 @@ http://exqdev.org/download/screenrec.mp4
 
 ## Install
 
-    git clone https://github.com/ExQDev/ra-calc.git && cd ra-calc && git submodule init && git submodule update --recursive
+    git clone https://github.com/ExQDev/ra-calc.git && cd ra-calc
 
 ## Run
 
