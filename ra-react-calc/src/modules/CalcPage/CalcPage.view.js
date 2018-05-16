@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import CalcForm from '../../components/CalcForm'
-import CalcTextInput from '../../components/CalcTextInput'
 import CalcButton from '../../components/CalcButton'
 import './CalcPage.css'
 import {
